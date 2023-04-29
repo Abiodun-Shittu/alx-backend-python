@@ -7,10 +7,11 @@ add type annotations to the function
 from typing import Any, Mapping, Optional, TypeVar, Union
 
 T = TypeVar('T')
+Resp = Union[Any, T]
+Defl = Union[T, None]
 
 
-def safely_get_value(dct: Mapping, key: Any,
-                     default: Optional[T] = None) -> Union[T, Any]:
+def safely_get_value(dct: Mapping, key: Any, default: Defl = None) -> Resp:
     """
     Retrieves a value from a dict using a given key.
     """
