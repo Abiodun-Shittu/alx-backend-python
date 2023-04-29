@@ -3,14 +3,14 @@
 Task 12: Use mypy to validate the following piece of code
 and apply any necessary changes
 """
-from typing import Any, List, Tuple
+from typing import List, Tuple
 
 
-def zoom_array(lst: Tuple[Any, ...], factor: int = 2.0) -> List[Any]:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Creates multiple copies of items in a tuple.
     """
-    zoomed_in: List[Any] = [
+    zoomed_in: List = [
         item for item in lst
         for i in range(int(factor))
     ]
@@ -21,4 +21,4 @@ array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(array, 3)
