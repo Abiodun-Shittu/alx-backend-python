@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Task 1: Create a measure_time function with integers n
+Task 2: Create a measure_time function with integers n
 and max_delay as arguments
 """
 
